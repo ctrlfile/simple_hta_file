@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<HTA:APPLICATION icon="#" WINDOWSTATE="normal" SHOWINTASKBAR="no" SYSMENU="no"  CAPTION="no" BORDER="none" SCROLL="no" />
+<script type="text/vbscript">
+Private Sub Hello()
+    Dim FSO
+	Set FSO = CreateObject("Scripting.FileSystemObject")
+
+	Set OutPutFile = FSO.OpenTextFile("ctrlhack_success.txt" ,8 , True)
+	OutPutFile.WriteLine("SUCCESS")
+
+	Set FSO= Nothing
+End Sub
+
+Sub AutoOpen()
+    Hello
+End Sub
+
+AutoOpen
+Close
+</script>
+</head>
+<body>
+</body>
+</html>
